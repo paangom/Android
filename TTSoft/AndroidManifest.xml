@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.ticket.android.bluebamboo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+<!--     <uses-permission android:name="android.permission.NFC" /> -->
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />    
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+     <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <!-- Required to enable our SyncAdapter after it's created. -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <!-- Required because we're manually creating a new account. -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    
+     <!-- <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="net.ticket.android.settings.GlobalApplication"
+         >
+        
+        <activity
+            android:name="net.ticket.android.login.StartApps"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+         
+        
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        
+        <activity 
+           android:name="net.ticket.android.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            
+        </activity>
+        
+        <activity
+            android:name="net.ticket.android.bluebamboo.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <!-- <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/techlist" />
+
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+            
+        </activity>
+        
+      
+        
+        <activity
+            android:name="net.ticket.android.bluebamboo.RapportActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name="net.ticket.android.bluebamboo.DepenseActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+        </activity>
+        <activity 
+             	  android:name="net.ticket.android.bluebamboo.DeviceListActivity"
+                  android:label="@string/select_device"
+                  android:theme="@android:style/Theme.Holo.Dialog"
+                  android:configChanges="orientation|keyboardHidden" />
+        
+        
+        <provider
+            android:name="net.ticket.android.network.provider.TicketProvider"
+            android:authorities="net.ticket.android.network.provider.TicketProvider"
+            android:exported="true"
+            android:multiprocess="true" >
+        </provider>
+        
+        <service android:name="net.ticket.android.network.adaptator.SyncService"
+                 android:exported="true"
+                 android:readPermission="com.example.permission.READ_DATA" >
+            <!-- This intent filter is required. It allows the system to launch our sync service
+            as needed. -->
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <!-- This points to a required XML file which describes our SyncAdapter. -->
+            <meta-data android:name="android.content.SyncAdapter"
+                       android:resource="@xml/syncadapter" />
+        </service>
+        <service android:name=".accounts.GenericAccountService">
+            <!-- Required filter used by the system to launch our account service. -->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <!-- This points to an XMLf ile which describes our account service. -->
+            <meta-data android:name="android.accounts.AccountAuthenticator"
+                       android:resource="@xml/authenticator" />
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TTSoft</string>
+    <string name="hello_world">Hello world!</string>
+    
+   
+    <string name="text_bluetooth_off">Bluetooth is Off</string>
+    <string name="text_bluetooth_on">Bluetooth is On</string>
+    
+    <string name="text_connect">Connect</string>
+    <string name="text_disconnect">Diconnect</string>
+    
+    <string name="text_enable_bluetooth">Enable Bluetooth</string>
+    <string name="text_disable_bluetooth">Disable Bluetooth</string>
+     <string name="action_settings">Parametrages</string>
+    <string name="text_scan_devices">Chercher imprimantes</string>
+   
+    
+    <string name="action_sectionnement">Sectionnement</string>
+    <string name="text_stop_scan">Scan Devices</string>
+    <string name="text_reset_data">Fin de service</string>
+    <string name="text_load_tickets">Chargement de tickets</string>
+    <string name="text_logout">Deconnexion</string>
+    <string name="text_sync_data">Synchronisation tickets</string>
+    <string name="text_depenses">Depenses</string>
+     <string name="text_switch">Changer Itineraire</string>
+     <string name="text_rapport">Rapport</string>
+     <string name="text_print_rapport">Imprimer Rapport</string>
+   
+    
+    
+    <string name="text_list_paired_devices">Paired Devices</string>
+    <string name="text_list_devices">List of Devices</string>
+    
+    <string name="text_pair">Pair</string>
+    
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="text_print_demo">Print Demo</string>
+    <string name="text_print_barcode">Print Barcode</string>
+    <string name="text_print_image">Print Image</string>
+    <string name="text_print_receipt">Print Receipt</string>
+    <string name="text_print_text">Print Text</string>
+    
+    <string name="text_scan_bluetooth">Scan</string>
+    
+    
+    <string name="username">Identifiant</string>
+    <string name="password">Mot de passe</string>
+    <string name="signin">Connecter</string>
+    <string name="cancel">Annuler</string>
+    <string name="ok">OK</string>
+    
+    
+    <string name="print">Print</string>
+    <string name="section_0">Section 0</string>
+    <string name="section_1">Section 1</string>
+    <string name="section_2">Section 2</string>
+    <string name="section_3">Section 3</string>
+    <string name="section_4">Section 4</string>
+    <string name="section_5">Section 5</string>
+    <string name="section_6">Section 6</string>
+    
+       <string name="section_20">C-Parakou</string>
+    <string name="section_21">C-Djougou</string>
+    <string name="section_22">C-Natitin</string>
+    <string name="section_23">C-Tanguieta</string>
+    <string name="section_24">C-Bassila</string>
+     <string name="section_25">C-Bohicon</string>
+    
+    
+    <string name="rapport_list">Rapport du jour </string>
+    
+     <!--  DeviceListActivity -->
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">CHOISIR IMPRIMANTE </string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">IMPRIMANTE NON TROUVER</string>
+    <string name="title_paired_devices">IMPRIMANTES ASSOCIEES</string>
+    <string name="title_other_devices">AUTRES IMPRIMANTES</string>
+    <string name="button_scan">CHERCHER IMPRIMANTES</string>
+      
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to </string>
+    <string name="title_not_connected">not connected</string>
+    <style name="ButtonText">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">#ffffff</item>
+    <item name="android:gravity">center</item>
+    <item name="android:layout_margin">3dp</item>
+    <item name="android:textSize">25sp</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:shadowColor">#000000</item>
+    <item name="android:shadowDx">1</item>
+    <item name="android:shadowDy">1</item>
+    <item name="android:shadowRadius">2</item>
+  
+     </style>
+    
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Tickets</item>
+        <item >Rapport</item>
+        
+    </string-array>
+    
+  
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+</resources>

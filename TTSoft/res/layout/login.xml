@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  android:fillViewport="true">
+  <RelativeLayout 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content" android:background="#ffffff">
+  	
+  		<!-- Login Form -->
+		<LinearLayout
+		  
+		  android:orientation="vertical"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:padding="10dip"
+		  android:gravity="center"
+		  >
+		  
+		<TextView android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:textColor="#372c24"
+		  		android:text="Idendifiant"/>
+		  <EditText android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="5dip"
+		  		android:layout_marginBottom="20dip"
+		  		android:id="@+id/login"
+		  		android:singleLine="true"/>
+		  <!--  Password Label -->
+		  <TextView android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		
+		  		android:textColor="#372c24"
+		  		android:text="Mot de passe"/>
+		  <EditText android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="5dip"
+		  		android:singleLine="true"
+		  		android:id="@+id/password"
+		  		android:password="true"/>
+		  <!-- Login button -->	
+		  <Button android:id="@+id/btnLogin" 
+		  		android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="10dip"
+		  		android:onClick="connexionClicked"
+		  		android:text="Connexion"/>
+		  <!-- Link to Registration Screen -->		
+		  
+		    
+		</LinearLayout>
+  		<!-- Login Form Ends --> 		
+  		
+  </RelativeLayout>
+</ScrollView>
