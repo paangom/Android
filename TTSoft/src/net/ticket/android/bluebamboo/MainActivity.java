@@ -577,7 +577,7 @@ public class MainActivity extends FragmentActivity implements
 			if(GlobalApplication.is_device_connect==true){
 				new AlertDialog.Builder(this)
 				.setTitle("Alerte")
-				.setMessage("Veuillez dÃ©connecter l'imprimante avant dÃ©connexion!")
+				.setMessage("Veuillez déconnecter l'imprimante avant déconnexion!")
 				.setNeutralButton("Close", new DialogInterface.OnClickListener() { 
 					public void onClick(DialogInterface dlg, int sumthin) {
 						
@@ -589,7 +589,7 @@ public class MainActivity extends FragmentActivity implements
 			else{
 				AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
 				dialogBuilder.setTitle("Alerte");
-				dialogBuilder.setMessage("Voulez-vous vraiment vous dÃ©connecter!.");
+				dialogBuilder.setMessage("Voulez-vous vraiment vous déconnecter!.");
 				dialogBuilder.setPositiveButton("OUI", new DialogInterface.OnClickListener() { 
 					@Override
 					public void onClick(DialogInterface dlg, int sumthin) {
